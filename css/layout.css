@@ -1,0 +1,648 @@
+/* ==========================================================
+   LifeLedger Lite
+   layout.css
+   Layout & Navigation
+========================================================== */
+
+/* ==========================================================
+   TOP HEADER
+========================================================== */
+
+.top-bar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    height:70px;
+
+    background:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 20px;
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 2px 12px rgba(15,23,42,.05);
+
+}
+
+.logo{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+    letter-spacing:.3px;
+
+}
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+#main-content{
+
+    padding:20px;
+
+    padding-bottom:100px;
+
+    min-height:calc(100vh - 70px);
+
+}
+
+/* ==========================================================
+   PAGE TRANSITION
+========================================================== */
+
+.page{
+
+    display:none;
+
+    animation:pageFade .25s ease;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+   BOTTOM NAVIGATION
+========================================================== */
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:500px;
+
+    height:74px;
+
+    background:#ffffff;
+
+    border-top:1px solid var(--border);
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    align-items:center;
+
+    box-shadow:0 -6px 24px rgba(15,23,42,.08);
+
+    z-index:1000;
+
+}
+
+/* ==========================================================
+   NAV BUTTON
+========================================================== */
+
+.nav-btn{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    height:100%;
+
+    color:var(--text-light);
+
+    transition:all .25s ease;
+
+}
+
+.nav-btn:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-btn.active{
+
+    color:var(--primary);
+
+}
+
+.nav-btn.active::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:42px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+}
+
+.nav-btn span{
+
+    font-size:.72rem;
+
+    font-weight:500;
+
+}
+
+/* ==========================================================
+   FLOATING ACTION BUTTON
+========================================================== */
+
+.fab{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:92px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    box-shadow:0 10px 30px rgba(37,99,235,.35);
+
+    transition:all .25s ease;
+
+    z-index:999;
+
+}
+
+.fab:hover{
+
+    transform:scale(1.06);
+
+    background:var(--primary-dark);
+
+}
+
+/* ==========================================================
+   PAGE HEADER
+========================================================== */
+
+.page-header{
+
+    margin-bottom:24px;
+
+}
+
+.page-header h2{
+
+    margin-bottom:6px;
+
+}
+
+.page-header p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    font-size:.9rem;
+
+    color:var(--text-light);
+
+    margin-top:4px;
+
+}
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+.empty-state h3{
+
+    margin:15px 0 8px;
+
+}
+
+.empty-state p{
+
+    max-width:260px;
+
+}
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+.list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+/* ==========================================================
+   CARD ROW
+========================================================== */
+
+.card-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.card-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.card-title{
+
+    font-weight:600;
+
+}
+
+.card-subtitle{
+
+    font-size:.85rem;
+
+    color:var(--text-light);
+
+}
+
+.card-value{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.status-success{
+
+    color:var(--success);
+
+    font-weight:600;
+
+}
+
+.status-danger{
+
+    color:var(--danger);
+
+    font-weight:600;
+
+}
+
+.status-warning{
+
+    color:var(--warning);
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.form-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.form-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.form-actions .btn{
+
+    flex:1;
+
+}
+/* ==========================================================
+   DASHBOARD GRID
+========================================================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:16px;
+
+    margin:20px 0;
+
+}
+
+/* ==========================================================
+   STAT CARD
+========================================================== */
+
+.stat-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    min-height:130px;
+
+    padding:22px 18px;
+
+    border-radius:18px;
+
+    transition:all .25s ease;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.stat-card h4{
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+    text-transform:uppercase;
+
+    letter-spacing:.6px;
+
+    margin-bottom:12px;
+
+}
+
+.stat-card h2{
+
+    margin:0;
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    line-height:1.1;
+
+}
+
+/* ==========================================================
+   SUMMARY CARD
+========================================================== */
+
+.summary-card{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #3b82f6
+    );
+
+    color:#ffffff;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,.25);
+
+}
+
+.summary-card h2{
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+}
+
+.summary-card p{
+
+    color:rgba(255,255,255,.85);
+
+}
+
+/* ==========================================================
+   QUICK ACTIONS
+========================================================== */
+
+.quick-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.quick-actions .btn{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   DESKTOP CONTAINER
+========================================================== */
+
+body{
+
+    display:flex;
+
+    justify-content:center;
+
+    background:var(--background);
+
+}
+
+#app{
+
+    width:100%;
+
+    max-width:500px;
+
+    min-height:100vh;
+
+    position:relative;
+
+    background:var(--background);
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:480px){
+
+    .dashboard-grid{
+
+        gap:12px;
+
+    }
+
+    .stat-card{
+
+        min-height:115px;
+
+        padding:18px 12px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .quick-actions{
+
+        gap:10px;
+
+    }
+
+}

@@ -1,0 +1,249 @@
+/* ==========================================================
+   LifeLedger Lite
+   responsive.css
+========================================================== */
+
+
+/* ==========================================================
+   LARGE MOBILE
+========================================================== */
+
+@media (min-width:480px){
+
+    #main-content{
+
+        padding:24px;
+        padding-bottom:100px;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (min-width:768px){
+
+    :root{
+
+        --max-width:700px;
+
+    }
+
+    #main-content{
+
+        padding:28px;
+        padding-bottom:110px;
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:18px;
+
+    }
+
+    .quick-actions{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .form-actions{
+
+        justify-content:flex-end;
+
+    }
+
+    .form-actions .btn{
+
+        max-width:180px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LAPTOP
+========================================================== */
+
+@media (min-width:1024px){
+
+    :root{
+
+        --max-width:820px;
+
+    }
+
+    body{
+
+        background:#eef2f7;
+
+        padding:40px;
+
+    }
+
+    #app{
+
+        border-radius:24px;
+
+        overflow:hidden;
+
+        box-shadow:
+            0 20px 50px rgba(15,23,42,.10);
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+
+        gap:20px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   DESKTOP
+========================================================== */
+
+@media (min-width:1280px){
+
+    :root{
+
+        --max-width:900px;
+
+    }
+
+    #main-content{
+
+        padding:32px;
+
+        padding-bottom:120px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   EXTRA LARGE
+========================================================== */
+
+@media (min-width:1600px){
+
+    body{
+
+        padding:60px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   LANDSCAPE MOBILE
+========================================================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .top-bar{
+
+        height:60px;
+
+    }
+
+    #main-content{
+
+        padding-top:15px;
+
+        padding-bottom:85px;
+
+    }
+
+    .bottom-nav{
+
+        height:65px;
+
+    }
+
+    .fab{
+
+        bottom:78px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width:380px){
+
+    .dashboard-grid{
+
+        gap:10px;
+
+    }
+
+    .stat-card{
+
+        min-height:100px;
+
+        padding:14px 10px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:1.45rem;
+
+    }
+
+    .stat-card h4{
+
+        font-size:.72rem;
+
+    }
+
+    .quick-actions{
+
+        gap:8px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}

@@ -81,7 +81,7 @@ const Dashboard = (() => {
 
             <div class="card stat-card">
 
-                <h4>This Month Expense </h4>
+                <h4>Monthly Expense 💸</h4>
 
                 <h2 id="monthly-expense">
 
@@ -352,7 +352,7 @@ function renderRecentExpenses(expenses) {
                 class="link-btn"
             >
 
-                Amount
+                Balance
 
             </button>
 

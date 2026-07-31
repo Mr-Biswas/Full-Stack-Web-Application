@@ -69,7 +69,7 @@ const Dashboard = (() => {
 
             <div class="card stat-card">
 
-                <h4>Total Expenses</h4>
+                <h4>Total Expense 💸</h4>
 
                 <h2 id="total-expense">
 
@@ -81,7 +81,7 @@ const Dashboard = (() => {
 
             <div class="card stat-card">
 
-                <h4>This Month Expenses</h4>
+                <h4>This Month Expense </h4>
 
                 <h2 id="monthly-expense">
 
